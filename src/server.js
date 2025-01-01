@@ -16,7 +16,6 @@ app.post('/submit', (req, res) => {
     // Access form data
     const name = req.body.name;
     const email = req.body.email;
-    console.log(email);
     const message = req.body.message;
   
     // Process the data (e.g., save to database, send email)
