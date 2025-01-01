@@ -6,21 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form action="/signUp" method="POST">
+    <form action="/submit" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
+        <input type="text" id="username" name="username" required><br><br>
+        
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Sign In</button>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="userType">Type of User:</label>
+        <select id="userType" name="userType" required>
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+            <option value="viewer">Viewer</option>
+        </select><br><br>
+        
+        <input type="submit" value="Sign Up">
     </form>
-    <button type="submit">Sign Up</button>
+    <button onclick="redirect()">Sign In</button>
 </body>
 <script>
     function redirect(){
-        window.location.href = "./signUp.html";
+        window.location.href = "./signIn.html";
     }
 </script>
 </html>
